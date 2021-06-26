@@ -41,8 +41,13 @@ const SampleEffect = () => {
         setTimerRunning(false);
       }, 2000);
     }
+    return () => {window.clearTimeout(timer); console.log('the timer was cleaned up', Date.now()/1000)}
   });
 
+  useEffect(() => {
+      console.log('This painting needs some happy trees!')
+  }, [])
+  
   let buttonHandler = () => {
     if (!timerRunning) {
       setTimerRunning(true);
