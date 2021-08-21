@@ -18,3 +18,4 @@ export default class ClassComponentDemo extends Component {
         )
     }
 }
+
